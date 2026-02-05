@@ -1,0 +1,37 @@
+<h1>Patient List</h1>
+<body>
+    <table>
+        <tr>
+            <th>Patient Name</th>
+            <th>Reason of Visit</th>
+        </tr>
+
+        @for(patient of patients; track patient.id)
+        {
+            <tr>
+                <td>{{ patient.name }}</td>
+                <td>{{ patient.reasonOfVisit }}</td>
+            </tr>
+        }
+    </table>
+
+    <h2 style="font-size: 16px;">Add patient:</h2>
+    <input [(ngModel)]="newPatient.name" placeholder="Name">
+    <select [(ngModel)]="newPatient.reasonOfVisit">
+        <option value="" disabled selected>Select reason...</option>
+        @for(list of listOfReasons; track $index)
+        {
+            <option>{{list}}</option>
+        }
+    </select>
+    <button (click)="addPatient()">Add</button>
+</body>
+
+<div class="description">
+    <h2>About the List:</h2>
+    <p>The list of patients is displayed here. The user can add to the list using the name
+        of the patient and the reason for their visit.
+    </p>
+</div>
+
+<router-outlet />

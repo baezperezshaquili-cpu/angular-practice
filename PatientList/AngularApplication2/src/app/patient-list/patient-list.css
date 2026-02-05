@@ -1,0 +1,32 @@
+table{
+    background-color: palegoldenrod;
+    padding: 20px;
+    border: 2px black;
+    border-style: solid;
+}
+
+th{
+    background-color: goldenrod;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px black;
+}
+
+td{
+    background-color:wheat;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px black;
+}
+
+table, tr, h1, h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.description{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    border: 2px black;
+    background-color: wheat;
+    margin: auto;
+}
