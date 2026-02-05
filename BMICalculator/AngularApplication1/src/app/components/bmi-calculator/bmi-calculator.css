@@ -1,0 +1,16 @@
+.calculator
+{
+    background-color:rgb(192, 192, 255);
+    width: 400px;
+    border: 2px black;
+    border-style: solid;
+    padding: 20px
+}
+
+.description{
+    background-color: rgb(192, 192, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    margin: auto;
+    border: 2px black;
+}

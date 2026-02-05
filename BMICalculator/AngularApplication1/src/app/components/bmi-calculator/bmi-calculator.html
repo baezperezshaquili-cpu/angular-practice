@@ -1,0 +1,36 @@
+<style>
+    h1, h2, p, pre, div
+    {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<h1>BMI Calculator</h1>
+<h2>Enter height and weight to calculate your body mass index (BMI)</h2>
+
+<div class="calculator">
+    <form id="imperialCalc">
+        <label for="height">Height:</label>
+        <input type="number" [(ngModel)]="heightft" name="heightft" style="margin: 5px;" min="0" max="9">ft
+        <input type="number" [(ngModel)]="heightin" name="heightin" style="margin: 5px;" min="0" max="11.99" step="0.01">in<br>
+        <label for="weight">Weight:</label>
+        <input type="number" [(ngModel)]="weight" name="weight" style="margin: 10px;" min="0" max="1400" step="0.01">lb<br><br>
+        <button (click)="calculateBMI()"> Calculate! </button>
+    </form>
+</div>
+
+<div class="result" (*ngIf)="calculatedBMI !== null">
+    Your BMI: {{ calculatedBMI }}<br>
+    Class: <label [style.color]="textColor">{{ bmiClass }}</label>
+</div>
+
+<div class="description">
+    <h2>About the calculator:</h2>
+    <p>This page calculates an individual's body mass index (BMI). Since it uses the imperial
+        system, the BMI is calculated using the following formula:
+    </p>
+    <img src="https://bodymassindex.co/wp-content/uploads/2020/09/bmi-calculator-formula-imperial.png" alt="The Body Mass Index (BMI) formula using the imperial system" style="margin-left: auto; margin-right: auto; width: 25%; display: block;">
+    <p style="font-size: 75%; text-align: center;">Source: bodymassindex.co</p>
+</div>
+
+<router-outlet></router-outlet>
