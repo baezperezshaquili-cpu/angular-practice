@@ -1,0 +1,16 @@
+{
+    "Lua.workspace.library": [
+        "${addons}/smbx2-lunalua/module/library"
+    ],
+    "Lua.runtime.special": {
+        "API.load": "require",
+        "loadSharedAPI": "require",
+        "loadAPI": "require"
+    },
+    "Lua.runtime.version": "LuaJIT",
+    "Lua.runtime.builtin": {
+        "ffi": "disable",
+        "os.remove": "disable"
+    },
+    "Lua.workspace.checkThirdParty": false
+}

@@ -326,3 +326,4 @@ C:\Users\sewpa\Documents\FullStack Projects\PatientList\obj\Debug\net10.0\refint
 C:\Users\sewpa\Documents\FullStack Projects\PatientList\obj\Debug\net10.0\WebApplication2.pdb
 C:\Users\sewpa\Documents\FullStack Projects\PatientList\obj\Debug\net10.0\WebApplication2.genruntimeconfig.cache
 C:\Users\sewpa\Documents\FullStack Projects\PatientList\obj\Debug\net10.0\ref\WebApplication2.dll
+C:\Users\sewpa\Documents\FullStack Projects\PatientList\obj\Debug\net10.0\WebApplication2.sourcelink.json

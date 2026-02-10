@@ -13,7 +13,7 @@ export interface Patient{
   providedIn: 'root',
 })
 export class PatientListService {
-  private Url = "http://localhost:4200/patient-list";
+  private Url = "http://localhost:5290/api/patient";
 
   constructor (private http:HttpClient){}
 
