@@ -2,7 +2,7 @@ USE patientDB;
 
 CREATE TABLE Patients(
 	ID INT IDENTITY (1,1) PRIMARY KEY,
-	patientName NVARCHAR (50) NOT NULL,
+	patientName NVARCHAR (50),
 	dateCreated DATETIME DEFAULT GETDATE(),
 	reasonOfVisit NVARCHAR (255)
 );

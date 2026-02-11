@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PatientList implements OnInit {
   patients: Patient[] = [];
-  newPatient: Patient = {name: "", reasonOfVisit: ""};
+  newPatient: Patient = {name: "John Doe", reasonOfVisit: "Unknown"};
 
   listOfReasons: string[] = [
     "Medical emergency (Choking, heart attack, severe injury, etc.)",
