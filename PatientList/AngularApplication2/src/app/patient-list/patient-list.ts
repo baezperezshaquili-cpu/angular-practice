@@ -1,18 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PatientListService, Patient } from '../services/patient-list';
 import { RouterModule } from "@angular/router";
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-patient-list',
-  imports: [RouterModule, FormsModule],
+  imports: [RouterModule, FormsModule, CommonModule],
   templateUrl: './patient-list.html',
   styleUrl: './patient-list.css',
 })
 export class PatientList implements OnInit {
   patients: Patient[] = [];
-  newPatient: Patient = {name: "John Doe", reasonOfVisit: "Unknown"};
+  newPatient: Patient = {name: "", reasonOfVisit: ""};
+  showData = false;
+
 
   listOfReasons: string[] = [
     "Medical emergency (Choking, heart attack, severe injury, etc.)",
@@ -27,10 +29,14 @@ export class PatientList implements OnInit {
 
   selectedReason: string = "";
 
-  constructor (private patientListService: PatientListService, private http:HttpClient){}
+  constructor (private patientListService: PatientListService, private cdf: ChangeDetectorRef){}
 
   ngOnInit(): void {
-    this.patientListService.getPatients().subscribe(data => this.patients = data);
+    this.patientListService.getPatients().subscribe(data => {
+      this.patients = data;
+      this.showData = true;
+      this.cdf.detectChanges();
+    });
   }
 
   addPatient(): void {
