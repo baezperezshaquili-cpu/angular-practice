@@ -6,10 +6,10 @@
             <th>Reason of Visit</th>
         </tr>
 
-        @for(patient of patients; track patient.name)
+        @for(patient of patients; track patient.ID)
         {
             <tr>
-                <td>{{ patient.name }}</td>
+                <td>{{ patient.patientName }}</td>
                 <td>{{ patient.reasonOfVisit }}</td>
             </tr>
         }
@@ -17,7 +17,7 @@
     </table>
 
     <h2 style="font-size: 16px;">Add patient:</h2>
-    <input type="text" name="name" [(ngModel)]="newPatient.name" placeholder="Name" required>
+    <input type="text" name="patientName" [(ngModel)]="newPatient.patientName" placeholder="Name" required>
     <select name="reasonOfVisit" [(ngModel)]="newPatient.reasonOfVisit" required>
         <option value="" disabled selected>Select reason...</option>
         @for(list of listOfReasons; track $index)

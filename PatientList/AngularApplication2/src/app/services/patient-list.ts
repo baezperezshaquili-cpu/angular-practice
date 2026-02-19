@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Patient{
-  id?: number;
-  name: string;
-  currentDate?: string;
+  ID?: number;
+  patientName: string;
+  dateCreated?: string;
   reasonOfVisit: string;
 }
 

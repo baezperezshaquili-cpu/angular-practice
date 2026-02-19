@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class PatientList implements OnInit {
   patients: Patient[] = [];
-  newPatient: Patient = {name: "", reasonOfVisit: ""};
+  newPatient: Patient = {patientName: "", reasonOfVisit: ""};
   showData = false;
 
 
@@ -42,7 +42,7 @@ export class PatientList implements OnInit {
   addPatient(): void {
     this.patientListService.addPatient(this.newPatient).subscribe(patient => {
       this.patients.push(patient);
-      this.newPatient = {name: "", reasonOfVisit: ""};
+      this.newPatient = {patientName: "", reasonOfVisit: ""};
     })
   }
 }
